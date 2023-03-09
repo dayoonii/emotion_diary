@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { DiaryDispatchContext } from "./../App";
 
 import MyHeader from "./MyHeader";
@@ -18,10 +18,10 @@ const DiaryEditor = ({ isEdit, orignData }) => {
   const [emotion, setEmotion] = useState(3);
   const [date, setDate] = useState(getStringDate(new Date()));
 
-  const handleClickEmote = (emotion) => {
-    setEmotion(emotion);
-  };
   const { onCreate, onEdit, onRemove } = useContext(DiaryDispatchContext);
+  const handleClickEmote = useCallback((emotion) => {
+    setEmotion(emotion);
+  }, []);
 
   const navigate = useNavigate();
 

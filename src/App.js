@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useRef } from "react";
 import "./App.css";
-import { BrowserRouter, json, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import New from "./pages/New";
