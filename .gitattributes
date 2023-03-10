@@ -1,0 +1,8 @@
+demo/** linguist-documentation=false
+deom/** linguist-vendored=false
+
+src/main/resources/**/** linguist-vendored
+
+**/*.js linguist-vendored
+
+**/*.html linguist-vendored
